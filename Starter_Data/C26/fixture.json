@@ -1,0 +1,140 @@
+{
+  "case_id": "C26",
+  "synthetic": true,
+  "data_version": "v3.2",
+  "currency": "INR unless explicitly stated",
+  "missing_values": "null means unknown, never zero",
+  "records": {
+    "orders": [
+      {
+        "id": "OD1",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD2",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD3",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD4",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD5",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD6",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD7",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD8",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD9",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      },
+      {
+        "id": "OD10",
+        "basket_inr": 400,
+        "merchant_fee_pct": 15,
+        "customer_fee_inr": 30,
+        "rider_cost_inr": 55,
+        "support_inr": 8,
+        "payment_inr": 5,
+        "distance_km": 2,
+        "deadline_minutes": 35
+      }
+    ],
+    "riders": [
+      {
+        "id": "R1",
+        "max_orders": 3,
+        "assigned": 2
+      },
+      {
+        "id": "R2",
+        "max_orders": 3,
+        "assigned": 3
+      }
+    ],
+    "expected_unit_contribution_inr": 22
+  },
+  "public_checks": [
+    "Basket 400 at 15% merchant fee plus customer fee 30, less rider 55, support 8 and payment 5 gives contribution 22.",
+    "If rider cost rises to 85, contribution becomes -8; flag it rather than hiding the loss.",
+    "If all riders are full, show unavailable capacity and a proposed later slot."
+  ],
+  "limit": "Small teaching fixture for a bounded prototype. Market demand, willingness to pay and production performance remain unproven."
+}

@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node tests/contribution.test.js && node tests/feasibility.test.js && node tests/orders.test.js && node tests/extras.test.js && node tests/roles.test.js && node tests/persistence.test.js && node tests/customer-commerce.test.js && node tests/auth-tenancy.test.js && node tests/menu-management.test.js && node tests/analytics-refunds.test.js && node tests/rider-portal.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}

@@ -1,0 +1,27 @@
+/* Role picker, header user chip and customer portal */
+.header-user { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.user-chip { display: flex; align-items: center; gap: 10px; }
+.user-name { font-size: 14px; font-weight: 700; line-height: 1.2; }
+.user-role { font-size: 12px; color: var(--muted); }
+.role-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); }
+.role-dot.role-owner { background: var(--primary); }
+.role-dot.role-dispatcher { background: var(--accent); }
+.role-dot.role-customer { background: var(--green); }
+
+.role-page { flex: 1; padding: 48px 24px; max-width: 1100px; width: 100%; margin: 0 auto; }
+.role-intro { text-align: center; margin-bottom: 32px; }
+.role-intro h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+.role-intro p { color: var(--muted); margin-top: 8px; }
+.role-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.role-card { display: flex; flex-direction: column; gap: 12px; transition: transform 0.15s, box-shadow 0.15s; }
+.role-card:hover { transform: translateY(-3px); }
+.role-card h3 { font-size: 18px; }
+.role-card p { font-size: 14px; flex: 1; }
+.role-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary); }
+.role-card-dispatcher .role-icon { background: var(--blue-soft); color: var(--blue); }
+.role-card-customer .role-icon { background: var(--green-soft); color: var(--green); }
+
+@media (max-width: 900px) {
+  .hide-sm { display: none; }
+  .user-role { display: none; }
+}
